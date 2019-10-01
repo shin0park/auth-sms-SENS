@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>아이디 비밀번호 찾기</title>
+    <style>
+        h1 {
+            font-family: "Segoe UI";
+            font-size: 20px;
+            color: green;
+        }
+
+        p {
+            color: green;
+        }
+
+        #send_btn {
+            font-size: 15px;
+            font-family: "Segoe UI";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>아이디 찾기</h1>
+        <form id="auth_form" name="auth_form">
+            <fieldset>
+                <legend>회원정보에 등록한 휴대전화로 인증</legend>
+                <div><input id="phone_number" type="text" name="phone_number" placeholder="휴대전화번호"></div>
+                <button id="send_btn" type="button" onclick="authSms()">인증번호 받기</button>
+                <div><input id="auth_number" type="text" name="auth_number" placeholder="인증번호 숫자 입력"></div>
+                <button id="auth_btn" type="button" onclick="authNumber()">인증하기</button>
+                <div id="viewtimer"></div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+
+</html>
